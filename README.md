@@ -1,4 +1,4 @@
-mychef
+chef
 ======
 
 Chef playground
