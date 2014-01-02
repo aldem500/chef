@@ -2,7 +2,7 @@
 current_dir = File.dirname(__FILE__)
 log_level		:info
 log_location		STDOUT
-node_name               "mychef" 
+node_name               "admin" 
 client_key               "/etc/chef-server/admin.pem"
 validation_client_name   "chef-validator"
 validation_key           "/etc/chef-server/chef-validator.pem"
