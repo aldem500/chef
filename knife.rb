@@ -1,3 +1,4 @@
+#  2014-01-01	by aldem@500px.com
 #
 current_dir = File.dirname(__FILE__)
 log_level		:info
