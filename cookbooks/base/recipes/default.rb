@@ -21,7 +21,7 @@ cookbook_file '/etc/TezumaLabs.logo.sh' do
   source 'TezumaLabs.logo.sh'
   owner 'root'
   group 'root'
-  mode 00644
+  mode 00755
 end
 cookbook_file '/etc/update-motd.d/00-1tezuma' do
   source '00-1tezuma'
