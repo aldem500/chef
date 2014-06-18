@@ -1,0 +1,6 @@
+dbpath=/var/lib/mongodb
+logpath=/var/log/mongodb/mongodb.log
+logappend=true
+port = <%= node[:mongo][:mongodb][:port] %>
+replSet = <%= node[:mongo][:mongodb][:replset] %>
+rest = true

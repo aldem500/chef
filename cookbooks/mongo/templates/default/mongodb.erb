@@ -1,0 +1,4 @@
+ENABLE_MONGOS="<%= node[:mongo][:mongos][:enabled] ? "yes" : "no" %>"
+ENABLE_MONGODB="<%= node[:mongo][:mongodb][:enabled] ? "yes" : "no" %>"
+ENABLE_MONGOCONF="<%= node[:mongo][:mongoconf][:enabled] ? "yes" : "no" %>"
+ulimit -n 65000
