@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-# include_recipe "apt"
+include_recipe "apt"
 
 template '/etc/default/mongodb' do
   source 'mongodb.erb'
