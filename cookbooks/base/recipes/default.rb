@@ -29,3 +29,9 @@ cookbook_file '/etc/update-motd.d/00-1tezuma' do
   group 'root'
   mode 00755
 end
+cookbook_file '/root/.bashrc' do
+  source '.bashrc'
+  owner 'root'
+  group 'root'
+  mode 00755
+end
