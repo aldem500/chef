@@ -33,5 +33,5 @@ cookbook_file '/root/.bashrc' do
   source '.bashrc'
   owner 'root'
   group 'root'
-  mode 00755
+  mode 00644
 end
