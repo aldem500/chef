@@ -50,6 +50,27 @@ end
     action node[:mongo][type][:enabled] ? :create : :delete
   end 
 
+cookbook_file '/etc/mongodb1.conf' do
+  source 'mongodb1.conf'
+  owner 'root'
+  group 'root'
+  mode 00644
+end
+
+cookbook_file '/etc/mongodb2.conf' do
+  source 'mongodb2.conf'
+  owner 'root'
+  group 'root'
+  mode 00644
+end
+
+cookbook_file '/etc/mongodb3.conf' do
+  source 'mongodb3.conf'
+  owner 'root'
+  group 'root'
+  mode 00644
+end
+
   cookbook_file "/etc/init/#{type}.conf" do
     source "#{type}.conf"
     owner 'root'
