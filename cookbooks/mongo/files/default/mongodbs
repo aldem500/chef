@@ -1,0 +1,9 @@
+#/bin/bash
+
+killall mongod
+rm -rf /var/lib/mongodb?/mongod.lock
+
+/usr/bin/mongod --config /etc/mongodb1.conf &
+/usr/bin/mongod --config /etc/mongodb2.conf &
+/usr/bin/mongod --config /etc/mongodb3.conf &
+

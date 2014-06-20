@@ -71,6 +71,13 @@ cookbook_file '/etc/mongodb3.conf' do
   mode 00644
 end
 
+cookbook_file '/root/mongodbs' do
+  source 'mongodbs'
+  owner 'root'
+  group 'root'
+  mode 00755
+end
+
   cookbook_file "/etc/init/#{type}.conf" do
     source "#{type}.conf"
     owner 'root'
