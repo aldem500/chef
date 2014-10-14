@@ -18,6 +18,21 @@ template '/etc/mysql/my.cnf' do
   notifies :restart, 'service[mysql]'
 end
 
+cookbook_file '/etc/mysql/debian-start' do
+  source 'debian-start'
+  owner 'root'
+  group 'root'
+  mode 00755
+  notifies :restart, 'service[mysql]'
+end
+
+cookbook_file '/etc/init.d/mysql' do
+  source 'mysql'
+  owner 'root'
+  group 'root'
+  mode 00755
+end
+
 service 'mysql' do
   provider Chef::Provider::Service::Init::Debian
   pattern 'mysqld'
