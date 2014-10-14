@@ -11,6 +11,6 @@ apt_repository "percona" do
   uri "http://repo.percona.com/apt"
   distribution node['lsb']['codename']
   components [ 'main' ]
-  keyserver 'keyserver.ubuntu.com'
-  key 'CD2EFD2A'
+  keyserver 'keys.gnupg.net'
+  key '1C4CBDCDCD2EFD2A'
 end
