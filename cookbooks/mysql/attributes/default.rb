@@ -1,4 +1,4 @@
-default[:mysql][:pass] = 'OKOPyLwHjSHC7cl1'
+default[:mysql][:pass] = 'c2p55KaEy7Wap6Aw'
 default[:mysql][:auto_increment_offset] = 1
 default[:mysql][:server_id] = 1
 default[:mysql][:innodb_buffer_pool_size] = "1G"
