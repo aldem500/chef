@@ -1,0 +1,11 @@
+[client]
+host     = localhost
+user     = debian-sys-maint
+password = OKOPyLwHjSHC7cl1
+socket   = /var/run/mysqld3/mysqld.sock
+[mysql_upgrade]
+host     = localhost
+user     = debian-sys-maint
+password = OKOPyLwHjSHC7cl1
+socket   = /var/run/mysqld3/mysqld.sock
+basedir  = /usr

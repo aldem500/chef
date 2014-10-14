@@ -1,0 +1,34 @@
+[mysqld]
+bind-address=<%= node[:mysql][:bind] %>
+log-error=/var/log/mysql/mysql.log
+log_bin=/var/log/mysql/mysql-bin
+
+binlog_format = 'MIXED'
+max_connect_errors=1000000
+max_connections=1000
+connect_timeout=60
+log_warnings=2
+expire_logs_days=7
+relay-log=relay-bin
+
+innodb_buffer_pool_size = <%= node[:mysql][:innodb_buffer_pool_size] %>
+innodb_log_file_size = <%= node[:mysql][:innodb_log_file_size] %>
+skip_innodb_doublewrite
+skip-external-locking
+skip-name-resolve
+thread_stack=192K
+innodb_flush_method = O_DIRECT
+innodb_flush_log_at_trx_commit = 2
+innodb_support_xa = 0
+innodb_thread_concurrency=<%= node[:mysql][:innodb_thread_concurrency] %>
+innodb_file_per_table
+transaction-isolation=READ-UNCOMMITTED
+query_cache_type=OFF
+query_cache_size = 0
+query_cache_type = 0
+
+replicate-same-server-id = 0
+auto-increment-increment = 2
+auto-increment-offset = <%= node[:mysql][:auto_increment_offset] %>
+
+server-id = <%= node[:mysql][:server_id] %>

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mysql $1 --socket=/var/run/mysqld3/mysqld.sock
