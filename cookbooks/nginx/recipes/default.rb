@@ -67,10 +67,10 @@ directory "/etc/nginx/sites-enabled" do
   action :create
 end
 
-link "/etc/nginx/sites-enabled/default" do
-  action :delete
-  notifies :restart, 'service[nginx]'
-end
+#link "/etc/nginx/sites-enabled/default" do
+# action :delete
+#  notifies :restart, 'service[nginx]'
+#end
 
 
 cookbook_file '/etc/logrotate.d/nginx' do
