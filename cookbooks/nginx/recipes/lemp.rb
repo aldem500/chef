@@ -16,8 +16,8 @@ link "/etc/nginx/sites-enabled/default" do
   notifies :restart, 'service[nginx]'
 end
 
-template '/etc/nginx/sites-enabled/lemp' do
-  source 'lemp.erb'
+cookbook_file '/etc/nginx/sites-enabled/lemp' do
+  source 'lemp'
   owner 'root'
   group 'root'
   mode 00644
