@@ -1,5 +1,5 @@
 include_recipe "nginx::default"
-include_recipe "ssl::500px_pem"
+#include_recipe "ssl::500px_pem"
 
 template '/etc/nginx/sites-enabled/blog' do
   source 'blog.erb'

@@ -1,5 +1,5 @@
 include_recipe "nginx::default"
-include_recipe "ssl::500px_pem"
+#include_recipe "ssl::500px_pem"
 
 template '/etc/nginx/sites-enabled/dash' do
   source 'dash.erb'
