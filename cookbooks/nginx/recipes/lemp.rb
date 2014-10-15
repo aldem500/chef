@@ -32,3 +32,8 @@ cookbook_file '/usr/share/nginx/html/info.php' do
   notifies :restart, 'service[nginx]'
 end
 
+service 'php5-fpm' do
+  provider Chef::Provider::Service::Init::Debian
+  supports :status => false, :start => true, :stop => true, :restart => true
+  action :start
+end
